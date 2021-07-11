@@ -9,6 +9,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
+:root {
+    --primary-color: #e1bb80ff; 
+}
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -31,7 +35,8 @@ a {
     color: black;
 }
 
-h1, h2 {
+h1, 
+h2 {
     font-weight: 300;
     line-height: 1.2;
     margin: 10 px 0;
@@ -45,6 +50,75 @@ img {
     width: 100%;
 }
 
+/* Navbar */
+
 .navbar {
-    
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+/* Showcase */
+.showcase {
+    height: 400px;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
+}
+
+.showcase h1 {
+    font-size: 40px;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcase .grid {
+    overflow: visible;
+    grid-template-columns: 55% auto;
+    gap: 30px;
+}
+
+/* Utilities */
+
+.cointainer {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
