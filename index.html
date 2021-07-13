@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <title>The Coffee Bean: Cafe & Roastery</title>
 </head>
@@ -48,8 +49,22 @@
                 <h1>Our beans are so freshhhh!</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet lacus nec sollicitudin fringilla.</p><a href="features.html" class="btn btn-outline">Read More</a>
             </div>
+            <div>
+                <img src="img/overheadshot.jpg" alt="People in the Coffee Shop">
+            </div>
+
+            <div>
+                <img src="img/drinkmuffin.jpg" alt="A hot latte and a tasty muffin next to a plant">
+            </div>
+
+            <div>
+                <img src="img/beans.jpg" alt="Glasses full of coffee beans in a row">
+            </div>
+
             <div class="showcase-form card">
                 <h2>Get in on the down low</h2>
+                <p>Stay up to date on all the latest news and happenings on our goods and services</p>
+                <img src="img/sideshot.jpg" alt="More People in the Coffee Shop">
                 <form>
                     <div class="form-control">
                         <input type="text" name="firstname" placeholder="First Name" required>
@@ -67,7 +82,41 @@
     </section>
 </main>
 <footer>
-    <p>&copy; Copyright</p>
+    <div class="main-footer">
+        <div class="location">
+            <div id="map"></div>
+                <script>
+                    function initMap(){
+                        var options = {
+                            zoom: 8,
+                            center: {lat:38.240850, lng:-85.720530}
+                        }
+                        var map = new google.maps.Map(document.getElementById('map'), options);
+
+                        var marker = new google.maps.Marker({
+                            position:{lat:38.240850, lng:-85.720530},
+                            map:map
+                        
+                        });
+                    }
+
+                </script>
+                <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBsiq42tfo7KeAIsYs-rgL7kN-jXsZIaY&callback=initMap">
+</script>
+        
+        <em>Copyright &copy; 2021, The Coffee Bean Cafe and Roastery. All Rights Reserved</em>
+        <ul>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Join Our Team</a></li>
+            <li><a href="#">Contact Us</a></li>
+
+        </ul>
+        <div class="socialmedia">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        </div>
+    </div>
 </footer>
 </body>
 </html>
