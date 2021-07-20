@@ -53,7 +53,7 @@ img {
 
 }
 
-
+@media (min-width:1025px){
 
 /* Navbar */
 
@@ -82,7 +82,7 @@ img {
 }
 
 #logo {
-    display: inline-block;
+    display: inline-flex;
     margin: 15px;
     height: 60px;
     width: auto;
@@ -173,3 +173,4 @@ a.noHover:hover {
     background: #C13584;
     color: white;
   }
+}
