@@ -53,9 +53,16 @@ img {
 
 }
 
+/*Map*/
+#map{
+    height:400px;
+    width:100%;
+  }
+
+
 @media (min-width:1025px){
 
-/* Navbar */
+
 
 .navbar {
     background-color: var(--primary-color);
@@ -139,12 +146,7 @@ a.noHover:hover {
     height: 100%;
 }
 
-/*Map*/
-#map {
-    width: 100%;
-    height: 400px;
-    background-color: grey;
-}
+
 
 /* Style all font awesome icons */
 .fa {

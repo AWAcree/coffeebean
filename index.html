@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script.js" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBsiq42tfo7KeAIsYs-rgL7kN-jXsZIaY&callback=initMap&libraries=&v=weekly"
+    >
+</script>
     <title>The Coffee Bean: Cafe & Roastery</title>
 </head>
 <body class="body" id="body">
@@ -83,34 +86,11 @@
 </main>
 <footer>
     <div class="main-footer">
-        <div class="location">
-            <div id="map"></div>
-                <!--<script>
-                    function initMap(){
-                        var options = {
-                            zoom: 8,
-                            center: {lat:38.240850, lng:-85.720530}
-                        }
-                        var map = new google.maps.Map(document.getElementById('map'), options);
+        <div id="map"></div>
 
-                        var marker = new google.maps.Marker({
-                            position:{lat:38.240850, lng:-85.720530},
-                            map:map,
-                            
-                        
-                        });
-                        var infoWindow = new google.maps.InfoWindow({
-                            content: '<h1>The Coffee Bean</h1>'
-                        });
-                        marker.addListener('click', function(){
-                            infoWindow.open(map, marker);
-                        });
-                    }
 
-                </script>-->
-                <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBsiq42tfo7KeAIsYs-rgL7kN-jXsZIaY&callback=initMap">
-</script>
+            
+               
         
         <em>Copyright &copy; 2021, The Coffee Bean Cafe and Roastery. All Rights Reserved</em>
         <ul>
@@ -126,5 +106,6 @@
         </div>
     </div>
 </footer>
+
 </body>
 </html>
