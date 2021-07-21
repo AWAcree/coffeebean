@@ -20,7 +20,7 @@
 
 }
 
-
+@media (min-width:1025px){
 
 body {
     font-family: 'Noto Serif', serif;
@@ -60,7 +60,7 @@ img {
   }
 
 
-@media (min-width:1025px){
+
 
 
 
@@ -93,6 +93,7 @@ img {
     margin: 15px;
     height: 60px;
     width: auto;
+    object-fit:inherit;
     
   }
 a.noHover:hover {
@@ -146,7 +147,46 @@ a.noHover:hover {
     height: 100%;
 }
 
+/* Contact Us Form */
+.form-control input {
+    width: 320px;
+    padding: 10px;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 4px;
+}
 
+
+.error-hint {
+    border: 1px solid red;
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px;
+    font-size: 24px;
+    background: none; 
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e1bb80ff;
+    border: black;
+    color: white;
+}
+
+.thank-you {
+    padding: 40px;
+    font-size: 32px;
+    text-align: center;
+}
 
 /* Style all font awesome icons */
 .fa {

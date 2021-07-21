@@ -64,22 +64,26 @@
                 <img src="img/beans.jpg" alt="Glasses full of coffee beans in a row">
             </div>
 
-            <div class="showcase-form card">
+            <div class="contact-us">
                 <h2>Get in on the down low</h2>
                 <p>Stay up to date on all the latest news and happenings on our goods and services</p>
                 <img src="img/sideshot.jpg" alt="More People in the Coffee Shop">
                 <form>
                     <div class="form-control">
                         <input type="text" name="firstname" placeholder="First Name" required>
+                        <div class="error-hint hidden">Your first name is required</div>
                     </div>
                     <div class="form-control">
                         <input type="text" name="lastname" placeholder="Last Name" required>
+                        <div class="error-hint hidden">Your last name is required</div>
                     </div>
                     <div class="form-control">
                         <input type="email" name="email" placeholder="Email" required>
+                        <div class="error-hint hidden">Your email is required</div>
                     </div>
-                    <input type="submit" value="Send" class="btn btn-primary">
+                    <button type="submit">Submit</button>
                 </form>
+                <div class="thank-you hidden">Thank you for wanting to hear more!</div>
             </div>
         </div>
     </section>
