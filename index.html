@@ -10,8 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/script.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBsiq42tfo7KeAIsYs-rgL7kN-jXsZIaY&callback=initMap&libraries=&v=weekly"
     >
 </script>
@@ -25,14 +24,18 @@
         <div class="container flex">
             <a href="index.html" class="noHover"><img src="img/coffeebeanlogot.png" id="logo" alt="The Coffee Bean"></a>
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="hourslocation.html">Hours & Location</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                <button class="hamburger toggle" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-ul menu" id="nav-ul">
+                    <li class="home"><a href="index.html">Home</a></li>
+                    <li class="hours"></li>><a href="hourslocation.html">Hours & Location</a></li>
+                    <li class="menu"></li>><a href="menu.html">Menu</a></li>
+                    <li class="about"></li>><a href="about.html">About Us</a></li>
+                    <li class="contact"></li>><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
+
         </div>
     </div>
 </header>    
@@ -47,10 +50,11 @@
 
     <!-- Showcase -->
     <section class="showcase">
-        <div class="container grid">
+        <div class="container grid showcase-inner">
             <div class="showcase-text">
                 <h1>Our beans are so freshhhh!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet lacus nec sollicitudin fringilla.</p><a href="features.html" class="btn btn-outline">Read More</a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet lacus nec sollicitudin fringilla.</p>
+                <a href="features.html" class="btn">Read More</a>
             </div>
             <div>
                 <img src="img/overheadshot.jpg" alt="People in the Coffee Shop">
@@ -110,6 +114,6 @@
         </div>
     </div>
 </footer>
-
+<script src="js/script.js"></script>
 </body>
 </html>
