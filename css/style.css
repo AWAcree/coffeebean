@@ -66,17 +66,8 @@ img {
 
 }
 
-/*Map*/
-#map{
-    height:400px;
-    width:100%;
-  }
 
-
-
-
-
-
+/* Navbar */
 .navbar {
     display: flex;
     background-color: var(--primary-color);
@@ -135,11 +126,19 @@ a.noHover:hover {
 }
 
 /* Showcase */
+
+.main {
+    display: grid
+}
 .showcase {
+    display: flex;
     height: 100vh;
     background-color: var(--primary-color);
     color: #fff;
     position: relative;
+    flex-flow: column wrap; 
+    max-height: 600px; 
+    overflow: hidden;
 }
 
 
@@ -152,11 +151,30 @@ a.noHover:hover {
 }
 
 .showcase .grid {
-    overflow: visible;
+    overflow: auto;
     grid-template-columns: 55% auto;
     gap: 30px;
 }
 
+.showcase1-text {
+    flex-direction: column;
+}
+
+.showcase2-text {
+    display: column;
+}
+
+.showcase3-text {
+    display: column;
+}
+
+.showcase4-text {
+    display: column;
+}
+
+.showcase5-text {
+    display: column;
+}
 .btn {
     display: inline-block;
     border: none;
@@ -170,32 +188,13 @@ a.noHover:hover {
     opacity: 0.7;
 }
 
-/* Utilities */
 
-.cointainer {
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: auto;
-    padding: 0 40px;
-}
-
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
 
 /* Contact Us Form */
+
+.contact-us {
+    display: flex;
+}
 .form-control input {
     width: 320px;
     padding: 10px;
@@ -236,17 +235,39 @@ button:hover {
     text-align: center;
 }
 
+  /*Location & Hours*/
+  th {
+    text-align: right; 
+  }
+  /*Map*/
+  #map{
+    height:400px;
+    width:100%;
+  }
+
+ /* Footer */ 
+
 /* Style all font awesome icons */
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
+.socialmedia {
+    display: inline-flex;
+    flex-direction: row;
     text-align: center;
     text-decoration: none;
+}
+.fab {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: inherit;
+
   }
   
   /* Add a hover effect if you want */
-  .fa:hover {
+  .fab:hover {
     opacity: 0.7;
   }
   
@@ -255,66 +276,62 @@ button:hover {
   /* Facebook */
   .fa-facebook {
     background: #3B5998;
-    color: white;
+    color: black;
   }
   
   /* Instagram */
   .fa-instagram {
     background: #C13584;
-    color: white;
+    color: black;
   }
-  /*Tablet */
-@media (min-width:41em)  {}
 
-/*Desktop */
-@media (min-width:64em){
-
-body {
-    font-family: 'Noto Serif', serif;
-    background-color: #806443ff;
-    line-height: 1.6;   
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
+  .fa-twitter {
+    background: lightskyblue;
     color: black;
 }
 
-h1, 
-h2 {
-    font-weight: 300;
-    line-height: 1.2;
-    margin: 10 px 0;
+
+
+  /* Utilities */
+
+.cointainer {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
 }
 
-p {
-    margin: 10px 0;
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-img {
-    width: 100%;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+  
+
+  /*Tablet */
+@media (min-width:41em)  {
 
 }
 
-/*Map*/
-#map{
-    height:400px;
-    width:100%;
-  }
-
-
-
-
+/*Desktop */
+@media (min-width:64em){
 
 
 .navbar {
     background-color: var(--primary-color);
     color: #fff;
-    height: 100vh;
+    height: 50vh;
     width: 100%;
     display: flex;
     display: -webkit-flex;
@@ -326,7 +343,7 @@ img {
 .logo {
     display: flex;
     flex: 1;
-    flex-basis: 5%;
+    
   }
 
 .nav-ul {
@@ -341,7 +358,7 @@ img {
 .navbar a {
     color: #fff;
     padding: 10px;
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 .navbar a:hover {
@@ -363,14 +380,23 @@ a.noHover:hover {
 
 /* Showcase */
 
+.main {
+    display: grid;
+}
+
 .slogan1 {
     display: inline-flex;
 }
 .showcase {
+    display: flex;
     height: 400px;
     background-color: var(--primary-color);
     color: #fff;
     position: relative;
+    flex-flow: row wrap; 
+    max-width: 1200px; 
+
+    overflow: hidden;
 }
 
 .showcase h1 {
@@ -387,32 +413,31 @@ a.noHover:hover {
     gap: 30px;
 }
 
-/* Utilities */
 
-.cointainer {
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: auto;
-    padding: 0 40px;
+.showcase1-text {
+    flex-direction: row;
 }
 
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+.showcase2-text {
+    flex-direction: row;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+.showcase3-text {
+    flex-direction: row;
 }
+
+.showcase4-text {
+    flex-direction: row;
+}
+
+
 
 /* Contact Us Form */
+
+.contact-us {
+    display: flex;
+}
+
 .form-control input {
     width: 320px;
     padding: 10px;
@@ -453,17 +478,39 @@ button:hover {
     text-align: center;
 }
 
+/*Location & Hours*/
+th {
+    text-align: right; 
+  }
+
+/*Map*/
+#map{
+    display: inline-flex;
+    height: 50vh;
+    width: 100%;
+  }
+
+ /* Footer */ 
+
 /* Style all font awesome icons */
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
+
+.socialmedia {
+    display: inline-flex;
+    flex-direction: row;
     text-align: center;
     text-decoration: none;
+}
+.fab {
+
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
   }
   
   /* Add a hover effect if you want */
-  .fa:hover {
+  .fab:hover {
     opacity: 0.7;
   }
   
@@ -472,12 +519,43 @@ button:hover {
   /* Facebook */
   .fa-facebook {
     background: #3B5998;
-    color: white;
+    color: black;
   }
   
   /* Instagram */
   .fa-instagram {
     background: #C13584;
-    color: white;
+    color: black;
   }
+  .fa-twitter {
+      background: lightskyblue;
+      color: black;
+  }
+
+
+
+  /* Utilities */
+
+.cointainer {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
 }
