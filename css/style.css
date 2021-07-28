@@ -120,11 +120,11 @@ img {
     display: block;
 }
 
-.hambuger:focus {
+.hamburger:focus {
     outline: none;
 }
 
-#logo {
+.logo {
     height: 100%;
     width: auto;
     
@@ -309,17 +309,34 @@ img {
 
 
 
-/*Navbar Desk */
+
 
 .navbar {
     background-color: var(--primary-color);
     color: #fff;
-    height: 70px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+
 }
 
-.navbar ul {
+.logo {
     display: flex;
+    flex: 1;
+    flex-basis: 5%;
+  }
+
+.nav-ul {
+    display: inline-flex;
+    flex-direction: row;
+    flex: 2;
+    flex-wrap: wrap;
+    
 }
+
 
 .navbar a {
     color: #fff;
@@ -339,19 +356,16 @@ img {
     display: none;
 }
 
-#logo {
-    display: inline-flex;
-    margin: 15px;
-    height: 60px;
-    width: auto;
-    object-fit:inherit;
-    
-  }
+
 a.noHover:hover {
     border-bottom: 2px;
 }
 
 /* Showcase */
+
+.slogan1 {
+    display: inline-flex;
+}
 .showcase {
     height: 400px;
     background-color: var(--primary-color);
