@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,18 +16,18 @@
 </script>
     <title>The Coffee Bean: Cafe & Roastery</title>
 </head>
-<body class="body" id="body">
+<body class="body" id="body"></body>
     <!--Navbar-->
 <header>
     
     <div class="navbar">
-        <div class="container flex"></div>
+        <div class="container flex">
             <a href="index.html" class="noHover logo"><img src="img/coffeebeanlogot.png" alt="The Coffee Bean"></a>
             <nav>
                 <button class="hamburger" id="hamburger">
                     <i class="fas fa-bars"></i>
                 </button>
-                <ul class="nav-ul">
+                <ul class="nav-ul" id="nav-ul">
                     <li class="home"><a href="index.html">Home</a></li>
                     <li class="hours"><a href="hourslocation.html">Hours & Location</a></li>
                     <li class="menu"><a href="menu.html">Menu</a></li>
@@ -35,7 +35,7 @@
                     <li class="contact"><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
-
+        </div>
         </div>
     </div>
 </header>    
@@ -43,31 +43,24 @@
     
 
     <!-- Showcase -->
-    <main>
+    <main class="main">
         <h2 class= "slogan1">If it's good to ya, it's gotta be good for ya!</h2>
     <section class="showcase">
-        <div class="container grid showcase-inner">
-            <div class="showcase-text">
+       
+            <div class="showcase1-text">
                 <h1>Our beans are so freshhhh!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet lacus nec sollicitudin fringilla.</p>
+            </div>
+                <div class="showcase2-text">
+                <p>Here at The Coffee Bean, we believe in providing a space for all your dreams and ideas. And then amplify those dreams with tons and tons of caffeine!</p>
                 <a href="features.html" class="btn">Read More</a>
             </div>
-            <div>
-                <img src="img/overheadshot.jpg" alt="People in the Coffee Shop">
-            </div>
-
-            <div>
-                <img src="img/drinkmuffin.jpg" alt="A hot latte and a tasty muffin next to a plant">
-            </div>
-
-            <div>
-                <img src="img/beans.jpg" alt="Glasses full of coffee beans in a row">
-            </div>
+        
 
             <div class="contact-us">
                 <h2>Get in on the down low</h2>
-                <p>Stay up to date on all the latest news and happenings on our goods and services</p>
                 <img src="img/sideshot.jpg" alt="More People in the Coffee Shop">
+                <p>Stay up to date on all the latest news and happenings on our goods and services</p>
+                
                 <form>
                     <div class="form-control">
                         <input type="text" name="firstname" placeholder="First Name" required>
@@ -85,29 +78,36 @@
                 </form>
                 <div class="thank-you hidden">Thank you for wanting to hear more!</div>
             </div>
-        </div>
+    </section>
+    <section>
+        
+            <div class="map-container">
+            <div class="map" id="map"></div>
+            </div>
+            <table>
+                <tr><th>Sunday</th><td>Closed</td></tr>
+                <tr><th>Monday</th><td>9am - 5pm</td></tr>
+                <tr><th>Tuesday</th><td>9am - 5pm</td></tr>
+                <tr><th>Wednesday</th><td>9am - 5pm</td></tr>
+                <tr><th>Thursday</th><td>9am - 5pm</td></tr>
+                </table>
+            </div>
     </section>
 </main>
-<footer>
-    <div class="main-footer">
-        <div id="map"></div>
-
-
-            
-               
-        
+<footer class="main-footer">      
+    
+        <div>
         <em>Copyright &copy; 2021, The Coffee Bean Cafe and Roastery. All Rights Reserved</em>
         <ul>
             <li><a href="#">Search</a></li>
             <li><a href="#">Join Our Team</a></li>
             <li><a href="#">Contact Us</a></li>
-
         </ul>
-        <div class="socialmedia">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        </div>
+        <ul class="socialmedia">
+            <li><i href="#" class="fab fa-facebook"></i></li>
+            <li><i href="#" class="fab fa-instagram"></i></li>
+            <li><i href="#" class="fab fa-twitter"></i></li>
+        </ul>
     </div>
 </footer>
 <script src="js/script.js"></script>

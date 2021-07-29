@@ -22,8 +22,10 @@
 
 body {
     font-family: 'Noto Serif', serif;
-    background-color: #806443ff;
-    line-height: 1.6;   
+    background-color: #806443ff; 
+    min-height: 100vh;
+    max-width: 1500px;
+    margin: 0 auto;
     
     
 }
@@ -37,8 +39,7 @@ header {
 }
 main {
     z-index: 1;
-    
-    
+      
 }
 
 ul {
@@ -50,19 +51,11 @@ a {
     color: black;
 }
 
-h1, 
-h2 {
-    font-weight: 300;
-    line-height: 1.2;
-    margin: 10 px 0;
-}
-
-p {
-    margin: 10px 0;
-}
 
 img {
     width: 100%;
+    max-height: 75vh;
+    min-width: 0;
 
 }
 
@@ -76,6 +69,24 @@ img {
     height: 20%;
     align-items: center;
     justify-content: center;
+
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
 }
 
 .nav-ul {
@@ -127,18 +138,16 @@ a.noHover:hover {
 
 /* Showcase */
 
-.main {
-    display: grid
-}
 .showcase {
     display: flex;
     height: 100vh;
     background-color: var(--primary-color);
     color: #fff;
     position: relative;
-    flex-flow: column wrap; 
+    flex-wrap: column wrap; 
     max-height: 600px; 
     overflow: hidden;
+    margin: 0 auto;
 }
 
 
@@ -150,31 +159,16 @@ a.noHover:hover {
     margin: 20px 0;
 }
 
-.showcase .grid {
-    overflow: auto;
-    grid-template-columns: 55% auto;
-    gap: 30px;
-}
+
 
 .showcase1-text {
-    flex-direction: column;
+    align-content: flex-start;
 }
 
 .showcase2-text {
-    display: column;
+    align-content: flex-end;
 }
 
-.showcase3-text {
-    display: column;
-}
-
-.showcase4-text {
-    display: column;
-}
-
-.showcase5-text {
-    display: column;
-}
 .btn {
     display: inline-block;
     border: none;
@@ -194,9 +188,10 @@ a.noHover:hover {
 
 .contact-us {
     display: flex;
+    flex-direction: column;
 }
 .form-control input {
-    width: 320px;
+    width: 100%;
     padding: 10px;
     font-size: 20px;
     color: #333;
@@ -236,16 +231,40 @@ button:hover {
 }
 
   /*Location & Hours*/
+
+  /*Map*/
+  .map-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .map{
+    text-align: center;
+    margin-top: 10px;
+    height: 400px;
+    width: 100%;
+    align-self: center;
+  }
+
   th {
     text-align: right; 
   }
-  /*Map*/
-  #map{
-    height:400px;
-    width:100%;
-  }
+  
 
  /* Footer */ 
+
+ .main-footer {
+     padding: 10px 0 10px 0;
+     width: 100%;
+     text-align: center;
+ }
+
+ .contact-us,
+.map-container,
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
 
 /* Style all font awesome icons */
 .socialmedia {
@@ -263,15 +282,16 @@ button:hover {
     width: 50px;
     height: 50px;
     line-height: inherit;
+    border-radius: 50%;
 
   }
   
-  /* Add a hover effect if you want */
+
   .fab:hover {
     opacity: 0.7;
   }
   
-  /* Set a specific color for each brand */
+
   
   /* Facebook */
   .fa-facebook {
@@ -289,39 +309,19 @@ button:hover {
     background: lightskyblue;
     color: black;
 }
-
-
-
-  /* Utilities */
-
-.cointainer {
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: auto;
-    padding: 0 40px;
-}
-
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
   
-
   /*Tablet */
 @media (min-width:41em)  {
-
+    .main,
+    .container,
+    .showcase,
+    .contact-us,
+    .map-container,
+    .main-footer {
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+    }
 }
 
 /*Desktop */
@@ -337,7 +337,17 @@ button:hover {
     display: -webkit-flex;
     flex-direction: column;
     -webkit-flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
 }
 
 .logo {
@@ -378,184 +388,13 @@ a.noHover:hover {
     border-bottom: 2px;
 }
 
-/* Showcase */
-
-.main {
-    display: grid;
-}
-
-.slogan1 {
-    display: inline-flex;
-}
-.showcase {
-    display: flex;
-    height: 400px;
-    background-color: var(--primary-color);
-    color: #fff;
-    position: relative;
-    flex-flow: row wrap; 
-    max-width: 1200px; 
-
-    overflow: hidden;
-}
-
-.showcase h1 {
-    font-size: 40px;
-}
-
-.showcase p {
-    margin: 20px 0;
-}
-
-.showcase .grid {
-    overflow: visible;
-    grid-template-columns: 55% auto;
-    gap: 30px;
+.contact-us,
+.map-container,
+.main-footer {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
 }
 
 
-.showcase1-text {
-    flex-direction: row;
-}
-
-.showcase2-text {
-    flex-direction: row;
-}
-
-.showcase3-text {
-    flex-direction: row;
-}
-
-.showcase4-text {
-    flex-direction: row;
-}
-
-
-
-/* Contact Us Form */
-
-.contact-us {
-    display: flex;
-}
-
-.form-control input {
-    width: 320px;
-    padding: 10px;
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 4px;
-}
-
-
-.error-hint {
-    border: 1px solid red;
-    color: red;
-}
-
-.hidden {
-    display: none;
-}
-
-button {
-    padding: 10px;
-    font-size: 24px;
-    background: none; 
-    border: 1px solid black;
-    border-radius: 10px;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #e1bb80ff;
-    border: black;
-    color: white;
-}
-
-.thank-you {
-    padding: 40px;
-    font-size: 32px;
-    text-align: center;
-}
-
-/*Location & Hours*/
-th {
-    text-align: right; 
-  }
-
-/*Map*/
-#map{
-    display: inline-flex;
-    height: 50vh;
-    width: 100%;
-  }
-
- /* Footer */ 
-
-/* Style all font awesome icons */
-
-.socialmedia {
-    display: inline-flex;
-    flex-direction: row;
-    text-align: center;
-    text-decoration: none;
-}
-.fab {
-
-    font-size: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-
-  }
-  
-  /* Add a hover effect if you want */
-  .fab:hover {
-    opacity: 0.7;
-  }
-  
-  /* Set a specific color for each brand */
-  
-  /* Facebook */
-  .fa-facebook {
-    background: #3B5998;
-    color: black;
-  }
-  
-  /* Instagram */
-  .fa-instagram {
-    background: #C13584;
-    color: black;
-  }
-  .fa-twitter {
-      background: lightskyblue;
-      color: black;
-  }
-
-
-
-  /* Utilities */
-
-.cointainer {
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: auto;
-    padding: 0 40px;
-}
-
-.flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
 }
